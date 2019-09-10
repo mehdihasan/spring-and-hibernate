@@ -17,4 +17,12 @@ public class BaseBallCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
+	
+	private void init() {
+		System.out.println("Bean is initing");
+	}
+	
+	private void cleanUp() {
+		System.out.println("Clean up my stuffs");
+	}
 }
