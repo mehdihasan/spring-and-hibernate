@@ -1,8 +1,8 @@
-package com.iglyphic.springdemo.lifecycle;
+package com.springdemo3.lifecycle;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.iglyphic.springdemo.one.Coach;
+import com.springdemo1.setup.Coach;
 
 public class BeanLifecycleDemoApp {
 

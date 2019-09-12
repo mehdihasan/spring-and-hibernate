@@ -1,4 +1,4 @@
-package com.iglyphic.springdemo.one;
+package com.springdemo1.setup;
 
 public class TrackCoach implements Coach {
 

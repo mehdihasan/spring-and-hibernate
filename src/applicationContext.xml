@@ -17,40 +17,39 @@
  	</bean> -->
  	
  	<bean 
- 	id="myFortuneService"
- 	class="com.iglyphic.springdemo.one.FortuneServiceImpl">
- 		<constructor-arg>
- 			<list>
- 				<value>${foo.fortune.one}</value>
- 				<value>${foo.fortune.two}</value>
- 				<value>${foo.fortune.three}</value>
- 			</list>
- 		</constructor-arg>
+	 	id="myFortuneService"
+	 	class="com.springdemo1.setup.FortuneServiceImpl">
+	 		<constructor-arg>
+	 			<list>
+	 				<value>${foo.fortune.one}</value>
+	 				<value>${foo.fortune.two}</value>
+	 				<value>${foo.fortune.three}</value>
+	 			</list>
+	 		</constructor-arg>
  	</bean>
 
     <bean 
-    id="myCoach" 
-    class="com.iglyphic.springdemo.one.BaseBallCoach">   
-        	<constructor-arg 
-        	ref="myFortuneService" />      
+    	id="myCoach" 
+    	class="com.springdemo1.setup.BaseBallCoach">   
+        		<constructor-arg ref="myFortuneService" />      
     </bean>
     
     <bean 
-    id="cricketCoach"
-    class="com.iglyphic.springdemo.one.CricketCoach">
-    	<property 
-    	name="fortuneService" 
-    	ref="myFortuneService" />
-    	<property name="emailaddress" value="${foo.email}" />
-    	<property name="team" value="${foo.team}" />
+	    id="cricketCoach"
+	    class="com.springdemo1.setup.CricketCoach">
+		    	<property 
+		    		name="fortuneService" 
+		    		ref="myFortuneService" />
+	    		<property name="emailaddress" value="${foo.email}" />
+	    		<property name="team" value="${foo.team}" />
     </bean>
     
     <bean 
-    id="myLoggerConfig" 
-    class="com.iglyphic.springdemo.one.MyLoggerConfig" 
-    init-method="initLogger">
-    	<property name="rootLoggerLevel" value="FINE" />
-    	<property name="printedLoggerLevel" value="FINE"/>
+	    id="myLoggerConfig" 
+	    class="com.springdemo1.setup.MyLoggerConfig" 
+	    init-method="initLogger">
+	    		<property name="rootLoggerLevel" value="FINE" />
+	    		<property name="printedLoggerLevel" value="FINE"/>
     </bean>
 
 </beans>

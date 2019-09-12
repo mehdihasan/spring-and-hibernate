@@ -1,8 +1,8 @@
-package com.iglyphic.springdemo.beanscope;
+package com.springdemo2.beanscope;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.iglyphic.springdemo.one.Coach;
+import com.springdemo1.setup.Coach;
 
 public class BeanScopeDemoApp {
 

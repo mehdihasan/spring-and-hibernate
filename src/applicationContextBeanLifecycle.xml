@@ -9,7 +9,7 @@
  	
  	<bean 
 	 	id="myFortuneService"
-	 	class="com.iglyphic.springdemo.one.FortuneServiceImpl">
+	 	class="com.springdemo1.setup.FortuneServiceImpl">
 	 		<constructor-arg>
 	 			<list>
 	 				<value>${foo.fortune.one}</value>
@@ -21,7 +21,7 @@
 
     <bean 
 	    id="myCoach" 
-	    class="com.iglyphic.springdemo.one.BaseBallCoach"
+	    class="com.springdemo1.setup.BaseBallCoach"
 	    init-method="init"
 	    destroy-method="cleanUp">   
 	        	<constructor-arg 
@@ -30,7 +30,7 @@
     
     <bean 
 	    id="myLoggerConfig" 
-	    class="com.iglyphic.springdemo.one.MyLoggerConfig" 
+	    class="com.springdemo1.setup.MyLoggerConfig" 
 	    init-method="initLogger">
 	    		<property name="rootLoggerLevel" value="FINE" />
 	    		<property name="printedLoggerLevel" value="FINE"/>

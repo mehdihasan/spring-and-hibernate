@@ -1,4 +1,4 @@
-package com.iglyphic.springdemo.one;
+package com.springdemo1.setup;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
