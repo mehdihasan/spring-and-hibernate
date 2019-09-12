@@ -8,8 +8,15 @@ public class AnnotationDemoApp {
 
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContextAnnotations.xml");
+		
+		// using custom bean ID
 		Coach coach = context.getBean("theTennisCoach", Coach.class);
 		System.out.println(coach.getDailyWorkout());
+		
+		// using default bean ID
+		Coach karateCoach = context.getBean("karateCoach", Coach.class);
+		System.out.println(karateCoach.getDailyWorkout());
+		
 		context.close();
 	}
 

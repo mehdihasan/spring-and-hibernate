@@ -3,18 +3,19 @@ package com.springdemo4.annotations;
 import org.springframework.stereotype.Component;
 
 import com.springdemo1.setup.Coach;
+
 /**
- * example Coach class of CUSTOM BEAN ID
+ * example Coach class of DEFAULT BEAN ID
  * 
  * @author mehdi
  *
  */
-@Component("theTennisCoach")
-public class TennisCoach implements Coach {
+@Component
+public class KarateCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return "Play tennis for 2 hours";
+		return "practice Karate for 2 hours for every 2 days";
 	}
 
 	@Override
