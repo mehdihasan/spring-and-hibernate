@@ -18,6 +18,10 @@ public class AnnotationBeanScopeDemoApp {
 		System.out.println("memory location for the coach: " + alphaCoach);
 		System.out.println("memory location for beta coach: " + betaCoach);
 		
+		
+		Coach haduduCoach = context.getBean("haduduCoach", Coach.class);
+		System.out.println("coach instruction: " + haduduCoach.getDailyWorkout());
+		
 		context.close();
 	}
 
