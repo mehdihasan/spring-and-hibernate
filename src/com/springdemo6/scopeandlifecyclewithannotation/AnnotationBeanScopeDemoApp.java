@@ -22,6 +22,9 @@ public class AnnotationBeanScopeDemoApp {
 		Coach haduduCoach = context.getBean("haduduCoach", Coach.class);
 		System.out.println("coach instruction: " + haduduCoach.getDailyWorkout());
 		
+		Coach swimmingCoach = context.getBean("swimmingCoach", Coach.class);
+		System.out.println("coach instruction: " + swimmingCoach.getDailyWorkout());
+		
 		context.close();
 	}
 

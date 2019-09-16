@@ -18,17 +18,17 @@ public class HaduduCoach implements Coach {
 
 	@PostConstruct
 	private void setup() {
-		System.out.println("Just after initialization - Ha Du du coach!");
+		System.out.println(">> Just after initialization - Ha Du du coach!");
 	}
 	
 	@PreDestroy
 	private void cleanUp() {
-		System.out.println("run this for cleanup - ha du du!");
+		System.out.println(">> run this for cleanup - ha du du!");
 	}
 	
 	@Override
 	public String getDailyWorkout() {
-		return "practice ha du du for 3 hours.";
+		return ">> practice ha du du for 3 hours.";
 	}
 
 	@Override
