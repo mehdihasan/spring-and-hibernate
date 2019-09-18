@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+
+</head>
+
 <body>
 
 	<h2>Spring MVC Demo - Home Page</h2>
@@ -16,5 +22,9 @@
 	<img src="${pageContext.request.contextPath}/resources/images/mvc.png">
 
 </body>
+
+<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/popper.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 
 </html>
