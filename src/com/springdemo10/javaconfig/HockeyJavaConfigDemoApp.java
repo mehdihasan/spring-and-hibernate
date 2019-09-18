@@ -5,6 +5,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.springdemo1.setup.Coach;
 
+/**
+ * @author mehdi
+ * 
+ * @objective: Java configuration of spring beans manually (without component scan & not defining 
+ * components / using @Bean annotation)
+ * 
+ * @steps
+ * 1. define method to expose bean (BeanHolder.java)
+ * 2. inject bean dependencies (BeanHolder.java)
+ * 3. read spring java configuration class (HockeyJavaConfigDemoApp.java)
+ * 4. retrieve bean from Spring container (HockeyJavaConfigDemoApp.java)
+ */
 public class HockeyJavaConfigDemoApp {
 
 	public static void main(String[] args) {
