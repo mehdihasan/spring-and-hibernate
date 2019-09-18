@@ -2,6 +2,7 @@ package com.springdemo10.javaconfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import com.springdemo1.setup.Coach;
 import com.springdemo1.setup.FortuneService;
@@ -39,6 +40,7 @@ import com.springdemo1.setup.SimpleFortuneService;
  * the code inside of the method. Hence this is a singleton bean.
  */
 @Configuration
+@PropertySource("classpath:sport.properties")
 public class BeanHolder {
 	
 	@Bean

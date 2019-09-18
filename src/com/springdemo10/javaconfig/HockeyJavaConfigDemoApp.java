@@ -8,8 +8,9 @@ import com.springdemo1.setup.Coach;
 /**
  * @author mehdi
  * 
- * @objective: Java configuration of spring beans manually (without component scan & not defining 
- * components / using @Bean annotation)
+ * @objective: 
+ * 1. Java configuration of spring beans manually (without component scan & not defining components / using @Bean annotation)
+ * 2. Injecting values form properties file
  * 
  * @steps
  * 1. define method to expose bean (BeanHolder.java)
