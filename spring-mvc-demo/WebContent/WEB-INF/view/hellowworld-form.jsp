@@ -10,7 +10,11 @@
 	
 		<input type="text" name="studentName" placeholder="What's your name?" />
 		
+		<br />
+		
 		<input type="text" name="studentAge" placeholder="What's your age?" />
+		
+		<br />
 		
 		<input type="submit" />
 	

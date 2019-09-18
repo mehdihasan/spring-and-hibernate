@@ -7,6 +7,8 @@
 	
 	<a href="show-form">Hello World form!</a>
 	
+	<a href="silly/show-form">Silly World form!</a>
+	
 	<br><br>
 	
 	<img src="${pageContext.request.contextPath}/resources/images/mvc.png">
