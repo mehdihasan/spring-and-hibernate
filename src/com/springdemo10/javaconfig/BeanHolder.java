@@ -4,9 +4,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-import com.springdemo1.setup.Coach;
-import com.springdemo1.setup.FortuneService;
-import com.springdemo1.setup.SimpleFortuneService;
+import com.springdemo01.setup.Coach;
+import com.springdemo01.setup.FortuneService;
+import com.springdemo01.setup.SimpleFortuneService;
 
 /**
  * @author mehdi

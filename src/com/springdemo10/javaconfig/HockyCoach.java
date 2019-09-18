@@ -2,8 +2,8 @@ package com.springdemo10.javaconfig;
 
 import org.springframework.beans.factory.annotation.Value;
 
-import com.springdemo1.setup.Coach;
-import com.springdemo1.setup.FortuneService;
+import com.springdemo01.setup.Coach;
+import com.springdemo01.setup.FortuneService;
 
 public class HockyCoach implements Coach {
 	
