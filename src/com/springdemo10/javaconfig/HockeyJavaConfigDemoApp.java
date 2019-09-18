@@ -17,6 +17,18 @@ import com.springdemo1.setup.Coach;
  * 2. inject bean dependencies (BeanHolder.java)
  * 3. read spring java configuration class (HockeyJavaConfigDemoApp.java)
  * 4. retrieve bean from Spring container (HockeyJavaConfigDemoApp.java)
+ * 
+ * @issues on injecting properties values Spring version below 4.3
+ * you need to add the following code to resolve the issue
+ * 
+   // add support to resolve ${...} properties
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer
+                    propertySourcesPlaceHolderConfigurer() {
+        
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+ * 
  */
 public class HockeyJavaConfigDemoApp {
 
