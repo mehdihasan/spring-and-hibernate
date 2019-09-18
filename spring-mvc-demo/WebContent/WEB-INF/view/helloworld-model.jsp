@@ -8,6 +8,8 @@
 	<p>Hello world Spring!</p>
 	
 	<p>Student name: ${message} </p>
+	
+	<p>Student age: ${age} </p>
 
 </body>
 
