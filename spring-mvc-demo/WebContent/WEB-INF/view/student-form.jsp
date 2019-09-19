@@ -29,6 +29,16 @@
 	
 	<br><br>
 	
+	Favorite Language:
+	
+	<br> <form:radiobutton path="favoriteLanguage" value="Java" /> Java 
+	<br> <form:radiobutton path="favoriteLanguage" value="Swift" /> Swift 
+	<br> <form:radiobutton path="favoriteLanguage" value="Kotlin" /> Kotlin 
+	<br> <form:radiobutton path="favoriteLanguage" value="Scala" /> Scala 
+	<br> <form:radiobutton path="favoriteLanguage" value="Ruby" /> Ruby 
+	
+	<br><br>
+	
 	<input type="submit" value="Submit" />
 	
 	</form:form>
