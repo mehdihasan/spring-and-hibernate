@@ -16,6 +16,8 @@
 	<div class="container-fluid">
 	
 		<P>The customer is confirmed: ${customer.firstName} ${customer.lastName}</P>
+		
+		<p>You have used total of your ${ customer.freePasses } free passes</p>
 	
 	</div>
 
