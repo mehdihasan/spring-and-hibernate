@@ -29,6 +29,11 @@
 			<form:errors path="freePasses" cssClass="alert alert-danger alert-dismissible fade show" />
 			
 			<br><br>
+						
+			Postal Code: <form:input path="postalCode" />
+			<form:errors path="postalCode" cssClass="alert alert-danger alert-dismissible fade show" />
+			
+			<br><br>
 			
 			<input type="submit" value="Submit" />
 		
