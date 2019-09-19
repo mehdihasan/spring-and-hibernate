@@ -35,6 +35,14 @@
 	
 	<br><br>
 	
+	Operating Systems:
+	
+	<br><form:checkbox path="operatingSystems" value="Linux" /> Linux 
+	<br><form:checkbox path="operatingSystems" value="indows" /> Windows 
+	<br><form:checkbox path="operatingSystems" value="MacOS" /> MacOS 
+	
+	<br><br>
+	
 	<input type="submit" value="Submit" />
 	
 	</form:form>
