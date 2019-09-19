@@ -18,6 +18,8 @@
 	<a href="silly/show-form">Silly World form!</a>
 	<br>
 	<a href="student/show-form">Student form!</a>
+	<br>
+	<a href="customer/show-form">Customer form!</a>
 	
 	<br><br>
 	
