@@ -26,15 +26,23 @@ public class QueryStudentDemo {
 			// start a transaction
 			session.beginTransaction();
 
-			// query student
+			// query student & display students
 			List<Student> students = session.createQuery("from Student").list();
-			
-			// display students
 			displayStudents(students);
 			
-			// query student firstname mehdi
+			// query student firstname mehdi & display
+			System.out.println("\n\n\nStudent whose firstName Mehdi");
 			students = session.createQuery("from Student s where s.firstName='Mehdi'").list();
+			displayStudents(students);
 			
+			// 
+			System.out.println("\n\n\nStudents whose firstName Mehdi OR lastName Hasan");
+			students = session.createQuery("from Student s where s.firstName='Mehdi' OR s.lastName='Hasan'").list();
+			displayStudents(students);
+			
+			// 
+			System.out.println("\n\n\nStudent whose email ends witn asan.me");
+			students = session.createQuery("from Student s where s.email LIKE '%asan.me'").list();
 			displayStudents(students);
 			
 			// commit transaction
