@@ -21,7 +21,7 @@
 		
 		<p>Your postal code is: ${ customer.postalCode }</p>
 		
-		<p>Your course code is: ${student.courseCode} </p>
+		<p>Your course code is: ${ customer.courseCode } </p>
 	
 	</div>
 

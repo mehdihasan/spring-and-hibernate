@@ -15,10 +15,13 @@ import javax.validation.Payload;
 public @interface CourseCode {
 
 	// define default course code
-	public String value() default "IGL";
+	public String prefix() default "IGL";
 	
-	// define default error message
-	public String message() default "must start with IGL";
+	// define default values
+	public String[] suffixes() default {"LUV"};
+	
+	// define default error prefix message
+	public String message() default "must start with IGL && ends with LUV";
 	
 	// define default groups
 	public Class<?>[] groups() default{};
