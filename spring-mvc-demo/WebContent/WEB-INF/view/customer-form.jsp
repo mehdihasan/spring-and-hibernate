@@ -34,6 +34,11 @@
 			<form:errors path="postalCode" cssClass="alert alert-danger alert-dismissible fade show" />
 			
 			<br><br>
+	
+			Course Code: <form:input path="courseCode" />
+			<form:errors path="courseCode" cssClass="alert alert-danger alert-dismissible fade show" />
+			
+			<br><br>
 			
 			<input type="submit" value="Submit" />
 		

@@ -20,6 +20,8 @@
 		<p>You have used total of your ${ customer.freePasses } free passes</p>
 		
 		<p>Your postal code is: ${ customer.postalCode }</p>
+		
+		<p>Your course code is: ${student.courseCode} </p>
 	
 	</div>
 
