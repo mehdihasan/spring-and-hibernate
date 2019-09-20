@@ -22,6 +22,11 @@
 	
 	<br><br>
 	
+	Course Code: <form:input path="courseCode" />
+	<form:errors path="courseCode" cssClass="alert alert-danger alert-dismissible fade show" />
+	
+	<br><br>
+	
 	Country:
 	
 	<form:select path="country">

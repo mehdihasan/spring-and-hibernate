@@ -5,6 +5,7 @@ import java.util.LinkedHashMap;
 public class Student {
 	private String firstName;
 	private String lastName;
+	private String courseCode;
 	private String country;
 	private String favoriteLanguage;
 	private String[] operatingSystems;
@@ -60,5 +61,13 @@ public class Student {
 
 	public void setOperatingSystems(String[] operatingSystems) {
 		this.operatingSystems = operatingSystems;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 }
