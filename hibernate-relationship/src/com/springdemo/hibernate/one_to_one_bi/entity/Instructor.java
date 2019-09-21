@@ -1,4 +1,4 @@
-package com.springdemo.hibernate.entity;
+package com.springdemo.hibernate.one_to_one_bi.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

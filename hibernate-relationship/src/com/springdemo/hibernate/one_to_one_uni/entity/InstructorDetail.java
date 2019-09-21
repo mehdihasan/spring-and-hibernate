@@ -1,4 +1,4 @@
-package com.springdemo.hibernate.entity;
+package com.springdemo.hibernate.one_to_one_uni.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,6 +26,30 @@ public class InstructorDetail {
 
 	public InstructorDetail(String youtubeChannel, String hobby) {
 		this.youtubeChannel = youtubeChannel;
+		this.hobby = hobby;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getYoutubeChannel() {
+		return youtubeChannel;
+	}
+
+	public void setYoutubeChannel(String youtubeChannel) {
+		this.youtubeChannel = youtubeChannel;
+	}
+
+	public String getHobby() {
+		return hobby;
+	}
+
+	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
 

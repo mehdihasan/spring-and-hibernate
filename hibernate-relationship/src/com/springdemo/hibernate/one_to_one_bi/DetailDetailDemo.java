@@ -1,12 +1,13 @@
-package com.springdemo.hibernate;
+package com.springdemo.hibernate.one_to_one_bi;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.springdemo.hibernate.entity.Instructor;
+import com.springdemo.hibernate.one_to_one_bi.entity.Instructor;
+import com.springdemo.hibernate.one_to_one_bi.entity.InstructorDetail;
 
-public class CreateStudentDemo {
+public class DetailDetailDemo {
 
 	public static void main(String[] args) {
 
@@ -14,6 +15,7 @@ public class CreateStudentDemo {
 		SessionFactory factory = new Configuration()
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Instructor.class)
+				.addAnnotatedClass(InstructorDetail.class)
 				.buildSessionFactory();
 		
 		// create session
@@ -21,16 +23,17 @@ public class CreateStudentDemo {
 		
 		try {			
 			
-			// create a student object
-			Instructor tempStudent = new Instructor("Mehdi", "Hasan", "mail@mehdihasan.me");
-			System.out.println("Student created");
-			
 			// start a transaction
 			session.beginTransaction();
 			
-			// save the student object
-			session.save(tempStudent);
-			System.out.println("Instructor saved");
+			int theId = 6;
+			InstructorDetail instructorDetail = session.get(InstructorDetail.class, theId);
+			
+			System.out.println("\n\n\n>> This is insructor detail: " + instructorDetail);
+			
+			System.out.println("\n\n\n>> This is associated isntructor: " + instructorDetail.getInstructor());
+			
+			session.delete(instructorDetail);
 			
 			// commit transaction
 			session.getTransaction().commit();
@@ -39,6 +42,7 @@ public class CreateStudentDemo {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
+			session.close();
 			factory.close();
 		}
 	}
