@@ -71,3 +71,31 @@ SET FOREIGN_KEY_CHECKS = 1;
 	2. Lazy: will retrieve on request
 - Unidirectional relationship
 - Bidirectional relationship
+
+
+## JoinColumn
+
+- @JoinColumn ... where does it find the column?
+
+The JoinColumn is actually fairly complex and it goes through a number of advanced steps to find the desired column.
+
+This info below is from the [documentation](http://docs.oracle.com/javaee/7/api/javax/persistence/JoinColumn.html#name--) 
+
+---
+
+The table in which it is found depends upon the context.
+
+- If the join is for a OneToOne or ManyToOne mapping using a foreign key mapping strategy, the foreign key column is in the table of the source entity or embeddable.
+
+- If the join is for a unidirectional OneToMany mapping using a foreign key mapping strategy, the foreign key is in the table of the target entity.
+
+- If the join is for a ManyToMany mapping or for a OneToOne or bidirectional ManyToOne/OneToMany mapping using a join table, the foreign key is in a join table.
+
+- If the join is for an element collection, the foreign key is in a collection table.
+
+--
+
+So as you can see, it depends on the context.
+
+As we used @OneToMany uni-directional (course has one-to-many reviews), the join column / foreign key column is in the target entity. In this case, the target entity is the Review class. So, you will find the join column "course_id" in the "review" table.
+
