@@ -4,10 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.springdemo.hibernate.one_to_one_bi.Instructor;
-import com.springdemo.hibernate.one_to_one_bi.InstructorDetail;
-
-public class DetailDetailDemo {
+public class GetInstructorCoursesDemo {
 
 	public static void main(String[] args) {
 
@@ -16,28 +13,31 @@ public class DetailDetailDemo {
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Instructor.class)
 				.addAnnotatedClass(InstructorDetail.class)
+				.addAnnotatedClass(Course.class)
 				.buildSessionFactory();
 		
 		// create session
 		Session session = factory.getCurrentSession();
 		
-		try {			
+		try {
 			
 			// start a transaction
 			session.beginTransaction();
 			
-			int theId = 6;
-			InstructorDetail instructorDetail = session.get(InstructorDetail.class, theId);
+			// 
+			// get instructor
+			int theId = 3;
+			Instructor instructor = session.get(Instructor.class, theId);
+			System.out.println("\n\n\nThe instructor: " + instructor);
 			
-			System.out.println("\n\n\n>> This is insructor detail: " + instructorDetail);
-			
-			System.out.println("\n\n\n>> This is associated isntructor: " + instructorDetail.getInstructor());
-			
-			session.delete(instructorDetail);
+			// get course for instructor
+			System.out.println("\n\n\nCourses: " + instructor.getCourses());
 			
 			// commit transaction
 			session.getTransaction().commit();
-			System.out.println("DONE!!!");
+			System.out.println("DONE!!!\n\n\n");
+			
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();

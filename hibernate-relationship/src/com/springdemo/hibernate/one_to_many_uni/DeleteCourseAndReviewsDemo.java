@@ -1,13 +1,10 @@
-package com.springdemo.hibernate.one_to_many;
+package com.springdemo.hibernate.one_to_many_uni;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.springdemo.hibernate.one_to_one_bi.Instructor;
-import com.springdemo.hibernate.one_to_one_bi.InstructorDetail;
-
-public class GetDetailDemo {
+public class DeleteCourseAndReviewsDemo {
 
 	public static void main(String[] args) {
 
@@ -16,22 +13,22 @@ public class GetDetailDemo {
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Instructor.class)
 				.addAnnotatedClass(InstructorDetail.class)
+				.addAnnotatedClass(Course.class)
+				.addAnnotatedClass(Review.class)
 				.buildSessionFactory();
 		
 		// create session
 		Session session = factory.getCurrentSession();
 		
-		try {			
+		try {
 			
 			// start a transaction
 			session.beginTransaction();
 			
-			int theId = 1;
-			InstructorDetail instructorDetail = session.get(InstructorDetail.class, theId);
+			int theId = 12;
+			Course course = session.get(Course.class, theId);
 			
-			System.out.println("\n\n\n>> This is insructor detail: " + instructorDetail);
-			
-			System.out.println("\n\n\n>> This is associated isntructor: " + instructorDetail.getInstructor());
+			session.delete(course);
 			
 			// commit transaction
 			session.getTransaction().commit();
