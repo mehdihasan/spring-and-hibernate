@@ -4,9 +4,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.springdemo.hibernate.one_to_one_uni.entity.Instructor;
-import com.springdemo.hibernate.one_to_one_uni.entity.InstructorDetail;
-
 public class DeleteDemo {
 
 	public static void main(String[] args) {

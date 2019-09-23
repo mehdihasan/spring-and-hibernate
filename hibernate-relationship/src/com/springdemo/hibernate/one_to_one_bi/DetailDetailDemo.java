@@ -4,9 +4,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.springdemo.hibernate.one_to_one_bi.entity.Instructor;
-import com.springdemo.hibernate.one_to_one_bi.entity.InstructorDetail;
-
 public class DetailDetailDemo {
 
 	public static void main(String[] args) {

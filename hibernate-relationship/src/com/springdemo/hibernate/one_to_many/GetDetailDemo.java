@@ -1,10 +1,13 @@
-package com.springdemo.hibernate.one_to_one_uni;
+package com.springdemo.hibernate.one_to_many;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class CreateDemo {
+import com.springdemo.hibernate.one_to_one_bi.Instructor;
+import com.springdemo.hibernate.one_to_one_bi.InstructorDetail;
+
+public class GetDetailDemo {
 
 	public static void main(String[] args) {
 
@@ -20,30 +23,24 @@ public class CreateDemo {
 		
 		try {			
 			
-			// create a object
-			Instructor instructor = new Instructor("Khad", "Aarby", "khad@aarby.com");
-			InstructorDetail instructorDetail = new InstructorDetail("www.youtube.com/ass", "code");
-			System.out.println("Objects created");
-			
-			// associate objects together
-			instructor.setInstructorDetail(instructorDetail);
-			
 			// start a transaction
 			session.beginTransaction();
 			
-			// save the student object
-			session.save(instructor);
-			System.out.println("Instructor & Details saved");
+			int theId = 1;
+			InstructorDetail instructorDetail = session.get(InstructorDetail.class, theId);
+			
+			System.out.println("\n\n\n>> This is insructor detail: " + instructorDetail);
+			
+			System.out.println("\n\n\n>> This is associated isntructor: " + instructorDetail.getInstructor());
 			
 			// commit transaction
 			session.getTransaction().commit();
 			System.out.println("DONE!!!");
 			
-			session.close();
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
+			session.close();
 			factory.close();
 		}
 	}
