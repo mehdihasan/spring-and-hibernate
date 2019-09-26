@@ -1,11 +1,11 @@
-package com.springdemo.aop;
+package com.springdemo.aop.v1;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.springdemo.aop.v2.dao.AccountV2DAO;
-import com.springdemo.aop.v2.dao.MembershipV2DAO;
+import com.springdemo.aop.v1.dao.AccountDAO;
+import com.springdemo.aop.v1.dao.MembershipDAO;
 
-public class MainDemoAppV2 {
+public class MainDemoApp {
 
 	public static void main(String[] args) {
 		
@@ -14,9 +14,9 @@ public class MainDemoAppV2 {
 				new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		// get the bean from spring container
-		AccountV2DAO accountDAO = context.getBean("accountV2DAO", AccountV2DAO.class);
+		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 		
-		MembershipV2DAO membershipDAO = context.getBean("membershipV2DAO", MembershipV2DAO.class);
+		MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 		
 		// call the business method 
 		// calling target twice to check aspect is being executed as per our @Before advice

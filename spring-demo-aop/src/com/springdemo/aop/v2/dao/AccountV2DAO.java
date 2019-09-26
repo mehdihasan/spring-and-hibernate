@@ -2,7 +2,8 @@ package com.springdemo.aop.v2.dao;
 
 import org.springframework.stereotype.Component;
 
-import com.springdemo.aop.Account;
+import com.springdemo.aop.v2.Account;
+
 
 /**
  * 
