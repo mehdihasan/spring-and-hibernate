@@ -23,6 +23,9 @@
     	- After running advice: run after the method (success execution)
 		- After throwing advice: run after method (if exception thrown)
 		- Around advice: run before and after method
+		- Order of advice: (usage of **@Order** annotation)
+			- place Advices in separate Aspects
+			- Add **@Order** annotation to Aspects
 
 - **Join Point**: When to apply code during problem execution.
 
