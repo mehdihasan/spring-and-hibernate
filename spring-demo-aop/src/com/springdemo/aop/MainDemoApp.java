@@ -23,6 +23,7 @@ public class MainDemoApp {
 		accountDAO.addAccount();
 		accountDAO.addAccount();
 		accountDAO.addAccount(new Account());
+		accountDAO.addAccount(new Account(), true);
 		
 		membershipDAO.addAccount();
 		membershipDAO.addSillyMember();

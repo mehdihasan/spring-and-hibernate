@@ -21,4 +21,8 @@ public class AccountDAO {
 	public void addAccount(Account account) {
 		System.out.println(getClass() + ":}}}}}}} DOINGMY DB WORK: ADDING MY ACCOUNT ");
 	}
+	
+	public void addAccount(Account account, boolean vipFlag) {
+		System.out.println(getClass() + ":}}--}}--}} DOINGMY DB WORK: ADDING VIP ACCOUNT ");
+	}
 }

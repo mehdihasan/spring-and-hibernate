@@ -33,4 +33,9 @@ public class DemoLoggingAspect {
 	public void runBeforeAppAddAccountAdviceWithAnyReturnTypeAndAccountParam() {
 		System.out.println("\n}}}}}}}}}}}}}>>> Executing @Before advice on methods starts with add and takes parameter Account");
 	}
+	
+	@Before("execution(* add*(com.springdemo.aop.Account, ..))")
+	public void runBeforeAppAddAccountAdviceWithAnyReturnTypeAndTwoParam() {
+		System.out.println("\n}}--}}--}}>>> Executing @Before advice on methods starts with add and takes parameter Account");
+	}
 }
