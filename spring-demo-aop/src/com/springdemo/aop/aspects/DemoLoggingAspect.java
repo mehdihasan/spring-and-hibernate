@@ -38,4 +38,9 @@ public class DemoLoggingAspect {
 	public void runBeforeAppAddAccountAdviceWithAnyReturnTypeAndTwoParam() {
 		System.out.println("\n}}--}}--}}>>> Executing @Before advice on methods starts with add and takes parameter Account");
 	}
+	
+	@Before("execution(* add*(..))")
+	public void runBeforeAppAddAccountAdviceWithAnyReturnTypeAndAnyNumberOfParam() {
+		System.out.println("\n}}>>>}}>>>}}>>> Executing @Before advice on methods starts with add and takes parameter Account");
+	}
 }
