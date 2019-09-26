@@ -21,12 +21,18 @@ public class MainDemoApp {
 		// call the business method 
 		// calling target twice to check aspect is being executed as per our @Before advice
 		accountDAO.addAccount();
+		System.out.println("--------------------------- END ---------------------------");
 		accountDAO.addAccount();
+		System.out.println("--------------------------- END ---------------------------");
 		accountDAO.addAccount(new Account());
+		System.out.println("--------------------------- END ---------------------------");
 		accountDAO.addAccount(new Account(), true);
+		System.out.println("--------------------------- END ---------------------------");
 		
 		membershipDAO.addAccount();
+		System.out.println("--------------------------- END ---------------------------");
 		membershipDAO.addSillyMember();
+		System.out.println("--------------------------- END ---------------------------");
 		
 		// close the context
 		context.close();
