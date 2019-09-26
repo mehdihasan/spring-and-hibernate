@@ -15,7 +15,9 @@ public class MainDemoApp {
 		// get the bean from spring container
 		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 		
-		// call the business method
+		// call the business method 
+		// calling target twice to check aspect is being executed as per our @Before advice
+		accountDAO.addAccount();
 		accountDAO.addAccount();
 		
 		// close the context
