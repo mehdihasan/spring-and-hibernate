@@ -32,6 +32,11 @@
 execution(modifiers-pattern? return-type-pattern declaring-type-pattern? method-name-pattern(param-pattern) throws-pattern?)
 ``` 
 
+match any method in our DAO package: com.springdemo.aop.dao
+```java
+@Before("execution(* com.springdemo.aop.dao.*.*(..))")
+```
+
 - **Weaving**: connecting aspects to target object to create an advice object
 	- Types: compile-time, load-time, run-time
 	- Regarding performance: run-time weaving is the slowest.

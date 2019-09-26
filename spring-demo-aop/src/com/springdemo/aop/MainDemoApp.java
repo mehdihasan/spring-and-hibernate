@@ -22,6 +22,7 @@ public class MainDemoApp {
 		// calling target twice to check aspect is being executed as per our @Before advice
 		accountDAO.addAccount();
 		accountDAO.addAccount();
+		accountDAO.addAccount(new Account());
 		
 		membershipDAO.addAccount();
 		membershipDAO.addSillyMember();
