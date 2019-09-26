@@ -23,4 +23,9 @@ public class DemoLoggingAspect {
 	public void runBeforeAppAddAccountAdvice() {
 		System.out.println("\n+++++++++++>>> Executing @Before advice on ALL methods starts with add");
 	}
+	
+	@Before("execution(* add*())")
+	public void runBeforeAppAddAccountAdviceWithAnyReturnType() {
+		System.out.println("\n************>>> Executing @Before advice on ALL methods starts with add");
+	}
 }
