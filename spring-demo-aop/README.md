@@ -37,6 +37,8 @@ match any method in our DAO package: com.springdemo.aop.dao
 @Before("execution(* com.springdemo.aop.dao.*.*(..))")
 ```
 
+	- **Pointcut Declarations**: To reuse pointcut expressions. Update pointcut in one location. 
+
 - **Weaving**: connecting aspects to target object to create an advice object
 	- Types: compile-time, load-time, run-time
 	- Regarding performance: run-time weaving is the slowest.
