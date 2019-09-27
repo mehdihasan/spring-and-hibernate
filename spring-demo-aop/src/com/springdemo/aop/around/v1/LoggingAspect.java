@@ -28,7 +28,14 @@ public class LoggingAspect {
 		long begin  = System.currentTimeMillis();
 		
 		// execute the method
-		Object result = proceedingJoinPoint.proceed();
+		Object result;
+		try {
+			result = proceedingJoinPoint.proceed();
+		} catch (Exception e) {
+			//e.printStackTrace();
+			logger.warning(e.getMessage());
+			result = "Major Accident! But no worries! Your private helicopter is on the way!";
+		}
 		
 		// end timestamp
 		long end  = System.currentTimeMillis();

@@ -21,7 +21,11 @@ public class App {
 		// 
 		logger.info("\n\nMain Program: Aroud Demo App");
 		logger.info("--------");
-		logger.info("My fortune is: " + trafficFortuneService.getFortune());
+		
+		boolean tripWire = true;
+		String data = trafficFortuneService.getFortune(tripWire);
+		
+		logger.info("My fortune is: " + data);
 		logger.info("\n\n");
 		logger.info("\n--Finished--");
 		
