@@ -28,8 +28,13 @@ To study AOP features in Spring.
 				- post-processing data: 
 					- post process the data before returning the caller. 
 					- Format the data to enrich the data
-		- After throwing advice: run after method (if exception thrown)
-		- Around advice: run before and after method
+		- **@AfterThrowing**: After throwing advice: run after method (if exception thrown)
+			- Use cases
+				- Log the exception
+				- Perform auditing on the exception
+				- Notify DevOps team via email or SMS
+				- Encapsulate this functionality in AOP aspect for easy reuse
+		- **@Around**: Around advice: run before and after method
 		- Order of advice: (usage of **@Order** annotation)
 			- place Advices in separate Aspects
 			- Add **@Order** annotation to Aspects
