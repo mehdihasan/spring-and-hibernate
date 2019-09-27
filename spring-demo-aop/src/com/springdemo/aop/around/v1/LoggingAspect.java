@@ -1,5 +1,7 @@
 package com.springdemo.aop.around.v1;
 
+import java.util.logging.Logger;
+
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -10,6 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
 	
+	private Logger logger = Logger.getLogger(getClass().getName());
+	
 	@Pointcut("execution(* com.springdemo.aop.around.v1.*.getFortune(..))")
 	public void pointCut() {}
 	
@@ -18,7 +22,7 @@ public class LoggingAspect {
 		
 		// print out advice method
 		String method = proceedingJoinPoint.getSignature().toShortString();
-		System.out.println("\n======>>> Executing @After (finally) on method: " + method);
+		logger.info("\n======>>> Executing @After (finally) on method: " + method);
 		
 		// begin timestamp
 		long begin  = System.currentTimeMillis();
@@ -32,7 +36,7 @@ public class LoggingAspect {
 		// compute duration and display it
 		long duration = end - begin;
 		
-		System.out.println("\n===>>>>>>> Duration of the program: " + duration / 1000 + " second(s)");
+		logger.info("\n===>>>>>>> Duration of the program: " + duration / 1000 + " second(s)");
 		
 		return result;
 	}

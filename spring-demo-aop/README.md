@@ -41,6 +41,7 @@ To study AOP features in Spring.
 				- Instrumentation / profining code (i.e. how long it take for a section of code to run?)
 				- Managing exceptions: Swallow / handle / stop exceptions
 			- **proceeding joint point**: to handle target method. ***Proceeding joint point*** can be used to execute ***target method***.
+			- usage of **Logger**
 		- Order of advice: (usage of **@Order** annotation)
 			- place Advices in separate Aspects
 			- Add **@Order** annotation to Aspects
