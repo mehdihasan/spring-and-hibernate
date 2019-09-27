@@ -1,3 +1,18 @@
+# Spring MVC
+A stand-alone project to study about Spring MVC. Topics covered: 
+- controllers in spring mvc
+- usage of forms in spring mvc
+- GET & POST operations
+- Form validation
+- usage of ConstraintValidator
+- usage of @Valid @ModelAttribute
+- Passing attributes to JSP through model
+- usage of @RequestParam
+- usage of HttpServletRequest
+- usage of BindingResult 
+- redirection
+- passing data through pages
+
 # Clear Tomcat Cache
 
 This is normally a caching issue with the cache.
