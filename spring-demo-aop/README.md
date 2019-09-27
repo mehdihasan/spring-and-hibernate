@@ -21,7 +21,13 @@ To study AOP features in Spring.
 				- Do not perform any expensive/slow operation
 				- Get in and out as quickly as possible
 		- After finally advice: run after the method (finally)
-    	- After running advice: run after the method (success execution)
+    	- **@AfterReturning**: After returning advice: run after the method (success execution)
+			- Use cases
+				- most common: logging, security, transactions
+				- audit logging: who, what, when, where
+				- post-processing data: 
+					- post process the data before returning the caller. 
+					- Format the data to enrich the data
 		- After throwing advice: run after method (if exception thrown)
 		- Around advice: run before and after method
 		- Order of advice: (usage of **@Order** annotation)
