@@ -1,6 +1,7 @@
-# Using AOP in Spring
+# Spring AOP
+To study AOP features in Spring. 
 
-
+## Topics covered:
 - AOP frameworks (In Java):
 	- Spring AOP
 	- AspectJ

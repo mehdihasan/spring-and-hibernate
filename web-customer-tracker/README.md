@@ -1,4 +1,6 @@
 # CRM: A Spring MVC Project
+A Spring project to study how Spring and Hibernate works together.
+It's a Spring MVC CRUD application to track record of customers. 
 
 ## Setup
 
