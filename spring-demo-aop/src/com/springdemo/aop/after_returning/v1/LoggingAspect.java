@@ -22,5 +22,17 @@ public class LoggingAspect {
 		
 		// print out the results of the method call
 		System.out.println("\n======>>> result is: " + result);
+		
+		// post process data
+		if (result != null 
+				&& result.size() > 0) {
+			convertAccountNamesToUpperCase(result);
+		}
+	}
+
+	private void convertAccountNamesToUpperCase(List<Account> result) {
+		for (Account account: result) {
+			account.setName(account.getName().toUpperCase());
+		}
 	}
 }

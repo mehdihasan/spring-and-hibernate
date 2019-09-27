@@ -7,6 +7,8 @@ My experiments with Spring
 
 3. [hibernate-basics](https://github.com/mehdihasan/spring-and-hibernate/tree/master/hibernate-basics): A stand-alone project to learn basics of Hibernate.
 
-4. [web-customer-tracker](https://github.com/mehdihasan/spring-and-hibernate/tree/master/web-customer-tracker): A Spring project to study how Spring and Hibernate works together.
+4. [hibernate-relationships](https://github.com/mehdihasan/spring-and-hibernate/tree/master/hibernate-relationship): To study on different relationships used in Hibernate.
 
-5. [spring-demo-aop](https://github.com/mehdihasan/spring-and-hibernate/tree/master/spring-demo-aop): To study AOP features in Spring.
+5. [web-customer-tracker](https://github.com/mehdihasan/spring-and-hibernate/tree/master/web-customer-tracker): A Spring project to study how Spring and Hibernate works together.
+
+6. [spring-demo-aop](https://github.com/mehdihasan/spring-and-hibernate/tree/master/spring-demo-aop): To study AOP features in Spring.
