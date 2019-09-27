@@ -35,6 +35,9 @@ public class LoggingAspect {
 			//e.printStackTrace();
 			logger.warning(e.getMessage());
 			result = "Major Accident! But no worries! Your private helicopter is on the way!";
+			
+			// re-throw the exception
+			throw e;
 		}
 		
 		// end timestamp
