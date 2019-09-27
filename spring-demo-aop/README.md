@@ -66,3 +66,31 @@ match any method in our DAO package: com.springdemo.aop.dao
 	- Regarding performance: run-time weaving is the slowest.
 
 
+## Adding AspectJ autoproxy support
+
+####SETP 01
+To add the aspectJ jar / lib 
+
+####SETP 02
+adding the following annotation to the configuration file if you are using Java config.
+```java
+@EnableAspectJAutoProxy
+```
+
+OR, if you have XML configuration,
+
+
+```xml
+<beans ...
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+	...
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- Add AspectJ autoproxy support for AOP -->
+	<aop:aspectj-autoproxy />
+
+	...
+```
+
