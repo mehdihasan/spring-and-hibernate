@@ -1,4 +1,15 @@
 # Hibernate
+A stand-alone project to learn about Hibernate. Topics covered: 
+- making connecction with MySQL server
+- usage of @Entity
+- @Table
+- @Id
+- @GeneratedValue(strategy = GenerationType.IDENTITY)
+- @Colum
+- Hibernate Session & Transactions
+- CRUD Operation in Hibernate
+- Custom query in Hibernate
+
 
 ## What is Hibernate?
 - A framework for persisting / saving Java objects in a database
