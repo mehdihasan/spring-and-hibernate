@@ -20,7 +20,7 @@ To study AOP features in Spring.
 				- Keep the code fast
 				- Do not perform any expensive/slow operation
 				- Get in and out as quickly as possible
-		- After finally advice: run after the method (finally)
+		- **After**: After finally advice: run after the method (finally) whatever returning or throwing.
     	- **@AfterReturning**: After returning advice: run after the method (success execution)
 			- Use cases
 				- most common: logging, security, transactions
@@ -35,6 +35,12 @@ To study AOP features in Spring.
 				- Notify DevOps team via email or SMS
 				- Encapsulate this functionality in AOP aspect for easy reuse
 		- **@Around**: Around advice: run before and after method
+			- Use case
+				- common: logging, auditing, security
+				- Pre-processing & post-processing data
+				- Instrumentation / profining code (i.e. how long it take for a section of code to run?)
+				- Managing exceptions: Swallow / handle / stop exceptions
+			- **proceeding joint point**: to handle target method. ***Proceeding joint point*** can be used to execute ***target method***.
 		- Order of advice: (usage of **@Order** annotation)
 			- place Advices in separate Aspects
 			- Add **@Order** annotation to Aspects
