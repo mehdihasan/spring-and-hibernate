@@ -1,6 +1,7 @@
-# Using AOP in Spring
+# Spring AOP
+To study AOP features in Spring. 
 
-
+## Topics covered:
 - AOP frameworks (In Java):
 	- Spring AOP
 	- AspectJ
@@ -19,10 +20,28 @@
 				- Keep the code fast
 				- Do not perform any expensive/slow operation
 				- Get in and out as quickly as possible
-		- After finally advice: run after the method (finally)
-    	- After running advice: run after the method (success execution)
-		- After throwing advice: run after method (if exception thrown)
-		- Around advice: run before and after method
+		- **After**: After finally advice: run after the method (finally) whatever returning or throwing.
+    	- **@AfterReturning**: After returning advice: run after the method (success execution)
+			- Use cases
+				- most common: logging, security, transactions
+				- audit logging: who, what, when, where
+				- post-processing data: 
+					- post process the data before returning the caller. 
+					- Format the data to enrich the data
+		- **@AfterThrowing**: After throwing advice: run after method (if exception thrown)
+			- Use cases
+				- Log the exception
+				- Perform auditing on the exception
+				- Notify DevOps team via email or SMS
+				- Encapsulate this functionality in AOP aspect for easy reuse
+		- **@Around**: Around advice: run before and after method
+			- Use case
+				- common: logging, auditing, security
+				- Pre-processing & post-processing data
+				- Instrumentation / profining code (i.e. how long it take for a section of code to run?)
+				- Managing exceptions: Swallow / handle / stop exceptions
+			- **proceeding joint point**: to handle target method. ***Proceeding joint point*** can be used to execute ***target method***.
+			- usage of **Logger**
 		- Order of advice: (usage of **@Order** annotation)
 			- place Advices in separate Aspects
 			- Add **@Order** annotation to Aspects
@@ -46,4 +65,32 @@ match any method in our DAO package: com.springdemo.aop.dao
 	- Types: compile-time, load-time, run-time
 	- Regarding performance: run-time weaving is the slowest.
 
+
+## Adding AspectJ autoproxy support
+
+####SETP 01
+To add the aspectJ jar / lib 
+
+####SETP 02
+adding the following annotation to the configuration file if you are using Java config.
+```java
+@EnableAspectJAutoProxy
+```
+
+OR, if you have XML configuration,
+
+
+```xml
+<beans ...
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		...
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- Add AspectJ autoproxy support for AOP -->
+	<aop:aspectj-autoproxy />
+
+	...
+```
 

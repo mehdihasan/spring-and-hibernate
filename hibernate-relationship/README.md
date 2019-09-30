@@ -1,5 +1,13 @@
-# Hibernate: One to One - Unidirectional relationship
-
+# Hibernate: Relationships
+To study on different relationships used in Hibernate
+Topics covered:
+- @OneToOne unidirectional
+- @OneToOne bidirectional
+- @OpeToMany unidirectional
+- @OneToMany bidirectional
+- @ManyToMany
+- Lazy Loading
+- Eager Loading
 
 ## Setting up the development environment
 
