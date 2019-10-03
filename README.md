@@ -12,3 +12,5 @@ My experiments with Spring
 5. [web-customer-tracker](https://github.com/mehdihasan/spring-and-hibernate/tree/master/web-customer-tracker): A Spring project to study how Spring and Hibernate works together.
 
 6. [spring-demo-aop](https://github.com/mehdihasan/spring-and-hibernate/tree/master/spring-demo-aop): To study AOP features in Spring.
+
+7. [spring-security-demo](https://github.com/mehdihasan/spring-and-hibernate/tree/master/spring-security-demo): experimenting security configuration in Sporing
