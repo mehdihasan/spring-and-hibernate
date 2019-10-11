@@ -14,3 +14,11 @@ My experiments with Spring
 6. [spring-demo-aop](https://github.com/mehdihasan/spring-and-hibernate/tree/master/spring-demo-aop): To study AOP features in Spring.
 
 7. [spring-security-demo](https://github.com/mehdihasan/spring-and-hibernate/tree/master/spring-security-demo): experimenting security configuration in Sporing
+
+
+### I like
+- AOP
+- Security
+
+### I do not like
+- taglib in JSP. Need to keep a reference of the uri(s).
