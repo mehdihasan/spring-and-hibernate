@@ -10,6 +10,7 @@ public class LoginController {
 
 	@GetMapping(Url.LOGIN)
 	public String customLoginPage() {
-		return "simple-login";
+		//return "simple-login";
+		return "fancy-login";
 	} 
 }
