@@ -15,7 +15,11 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.anyRequest().authenticated()
+				//.anyRequest().authenticated() // hide everything behind authentication 
+				.antMatchers("/").permitAll()  // allow public access to home page
+		        .antMatchers("/employees").hasRole("EMPLOYEE")
+		        .antMatchers("/leaders/**").hasRole("MANAGER")
+		        .antMatchers("/systems/**").hasRole("ADMIN")
 			.and()
 				.formLogin()
 					.loginPage(Url.LOGIN)
@@ -23,6 +27,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 					.permitAll()
 			.and()
 				.logout()
+					.logoutSuccessUrl("/")  // after logout then redirect to landing page (root)
 					.permitAll();
 	}
 
